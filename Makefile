@@ -45,7 +45,7 @@ schecks:
 
 ${PNAME}.c:
 	echo "#define REALINLINE __attribute__((always_inline)) inline" >> ${CFILE}
-	echo "REALINLINE void leave_not_ok(void) {" >> ${CFILE}
+	echo "REALINLINE void leave_ok(void) {" >> ${CFILE}
 	echo "	register int rax asm(\"rax\") = 60;" >> ${CFILE}
 	echo "	register int rdi asm(\"rdi\") = 0;" >> ${CFILE}
 	echo "	asm(\"syscall\");" >> ${CFILE}
@@ -59,7 +59,7 @@ ${PNAME}.c:
 	echo "}" >> ${CFILE}
 	echo "void _start() {" >> ${CFILE}
 	echo "	say_last_words();" >> ${CFILE}
-	echo "	leave_not_ok();" >> ${CFILE}
+	echo "	leave_ok();" >> ${CFILE}
 	echo "}" >> ${CFILE}
 
 Dockerentry.sh:
