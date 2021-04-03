@@ -1,16 +1,15 @@
-This program is a proof of concept on how to create
-only a Makefile insted of a lot of files.
+This is a proof of concept on how to
+create a program using only a Makefile.
 
-All the tools needed for building our program are done within a container.
-
-Simple run make.
+The example program is built and run inside a container.
 
 Make sure you are connected to the internet, and that you have docker.
 
-The program is a hello world made with inline x86_64 assembly.
-That also is not linked to any kind of library, not even clib!
+Simple run make.
+
+Our example program is a hello world made with inline x86_64 Linux assembly,
+also it is not linked to any kind of library, not even clib!
 
 - Enjoy.
 
 Lucie. 2021-05-03
-
